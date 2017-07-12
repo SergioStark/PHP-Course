@@ -22,12 +22,12 @@
 		<h1>
 			<?php 
 			#'Este es un saludo' no importa el valor de saludo
-			echo "Este es un $saludo";
+			echo "Este es un $saludo <br>";
 
 			#Concatenar variables
-			echo 'Este es otro saludo' . $saludo;
+			echo 'Este es otro saludo: ' . $saludo . '<br>';
 
-			echo "Imprimiendo saludo: {$saludo}"
+			echo "Imprimiendo saludo: {$saludo} <br>"
 			?>			
 		</h1>
 
