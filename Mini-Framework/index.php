@@ -16,20 +16,20 @@
 	<header>
 
 		<?php 
-			$saludo = "Hola mundo";
+			//Variable super global GET
+			//http://mini-framework.com/?saludo=Hola&nombre=Sergio&edad=%3Ch1%3E18%3C/h1%3E
+			$saludo = $_GET['saludo'];
+			$nombre = $_GET['nombre'];
+			$edad = $_GET['edad'];
 		?>
 
 		<h1>
 			<?php 
-			#'Este es un saludo' no importa el valor de saludo
-			echo "Este es un $saludo <br>";
-
-			#Concatenar variables
-			echo 'Este es otro saludo: ' . $saludo . '<br>';
-
-			echo "Imprimiendo saludo: {$saludo} <br>"
-			?>			
+				echo $saludo . ' ' . $nombre;
+			?>						
 		</h1>
+		<br>
+		<?php echo $edad; ?>
 
 	</header>
 </body>
