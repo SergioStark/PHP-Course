@@ -27,22 +27,24 @@
 	</header>
 
 	<main>
-		<h2>Nombres:</h2>
+		<?php foreach ($persona as $llave => $valor) { ?>
+			<p><?= $llave . ': ' . $valor  ?></p>
+		<?php } ?> 
+		
+		<pre>
+		<?php var_dump($tareas); ?>
+		</pre>
+
+		<h1>Tareas</h1>
 		<ul>
-		<?php foreach ($nombres as $nombre) { ?>
-			<li><?= $nombre ?></li>
+		<?php foreach ($tareas as $tarea) { ?>
+			<li>
+			<p>Tarea: <?php echo $tarea['Tarea']; ?></p> 
+			<p>Asignado: <?= $tarea['Asignado']; ?></p>
+			<p> <?php echo $tarea['Fecha']; ?> </p>
+			</li>
 		<?php } ?>
-		</ul>	
-
-		<h2>Animales:</h2>
-		<ol>
-		<?php foreach ($animales as $animal) : ?>
-			<li><?= $animal ?></li>
-		<?php endforeach ?>		
-		</ol>
-
-		<p><?= $dato; ?></p>
-		<p>¿Existe Sergio? <?php echo $respuesta2; ?></p>
+		</ul>
 
 	</main>
 
