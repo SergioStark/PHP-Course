@@ -1,36 +1,13 @@
 <?php 
-
-$tarea1 = array(
-	'tarea' => 'Terminar el código',
-	'asignado' => 'Alejandro',
-	'fecha' => '25 Jul 2017',
-	'completado' => false
+require 'functions.php';
+$tarea = array(
+	'nombre' => 'Tarea1',
+	'fecha' => '25 Jul 17'
 	);
 
-$tarea2 = array(
-	'tarea' => 'Revisar el código',
-	'asignado' => 'Alejandro',
-	'fecha' => '30 Jul 2017',
-	'completado' => true
-	);
+echo suma(5,10);
 
-$tareas = array(
-	$tarea1,
-	$tarea2,
-	array(
-		'tarea' => 'Subir el codigo',
-		'asignado' => 'David',
-		'fecha' => '31 Jul 2017',
-		'completado' => false
-		)
-	);
-
-
-
-
-
-
-
+dd($tarea);
 
 require 'index.view.php';
 
