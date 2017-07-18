@@ -23,29 +23,28 @@
 </head>
 <body>
 	<header>
-		<h1>Arreglos</h1>
+		<h1>Condicionales</h1>
 	</header>
 
 	<main>
-		<?php foreach ($persona as $llave => $valor) { ?>
-			<p><?= $llave . ': ' . $valor  ?></p>
-		<?php } ?> 
-		
-		<pre>
-		<?php var_dump($tareas); ?>
-		</pre>
-
-		<h1>Tareas</h1>
+		<h2>Tareas</h2>
 		<ul>
-		<?php foreach ($tareas as $tarea) { ?>
+			<?php foreach ($tareas as $tarea): ?>
 			<li>
-			<p>Tarea: <?php echo $tarea['Tarea']; ?></p> 
-			<p>Asignado: <?= $tarea['Asignado']; ?></p>
-			<p> <?php echo $tarea['Fecha']; ?> </p>
+				Tarea: <?= $tarea['tarea']; ?> <br>
+				Asigando: <?= $tarea['asignado']; ?> <br>
+				Fecha: <?= $tarea['fecha']; ?> <br>
+				Completado: <?php if($tarea['completado'] === true): ?>
+					Tarea Realizada
+				<?php elseif($tarea['completado'] === false): ?>
+					Tarea Incompleta
+				<?php else: ?>
+					No tiene valor asignado
+				<?php endif; ?>
+			
 			</li>
-		<?php } ?>
+			<?php endforeach; ?>
 		</ul>
-
 	</main>
 
 	<footer>
