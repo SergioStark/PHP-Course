@@ -30,13 +30,13 @@
 		<h2>Tareas</h2>
 		<ul>
 			<?php foreach ($tareas as $tarea): ?>
+			<?php if($tarea['completado'] !== true) continue; ?>
 			<li>
 				Tarea: <?= $tarea['tarea']; ?> <br>
 				Asigando: <?= $tarea['asignado']; ?> <br>
 				Fecha: <?= $tarea['fecha']; ?> <br>
 				<!-- Operador ternario -->
 				Completado: <?= ($tarea['completado'] === true) ? 'Tarea realizada' : 'Tarea no realizada'; ?>
-			
 			</li>
 			<?php endforeach; ?>
 		</ul>
