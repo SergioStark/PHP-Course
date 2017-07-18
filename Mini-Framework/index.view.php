@@ -34,13 +34,8 @@
 				Tarea: <?= $tarea['tarea']; ?> <br>
 				Asigando: <?= $tarea['asignado']; ?> <br>
 				Fecha: <?= $tarea['fecha']; ?> <br>
-				Completado: <?php if($tarea['completado'] === true): ?>
-					Tarea Realizada
-				<?php elseif($tarea['completado'] === false): ?>
-					Tarea Incompleta
-				<?php else: ?>
-					No tiene valor asignado
-				<?php endif; ?>
+				<!-- Operador ternario -->
+				Completado: <?= ($tarea['completado'] === true) ? 'Tarea realizada' : 'Tarea no realizada'; ?>
 			
 			</li>
 			<?php endforeach; ?>
