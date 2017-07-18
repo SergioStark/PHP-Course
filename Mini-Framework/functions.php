@@ -8,9 +8,4 @@ function dd($arreglo)
 	die();
 }
 
-function suma($a, $b)
-{
-	return $a + $b;
-}
-
 ?>
