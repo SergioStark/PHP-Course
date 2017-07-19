@@ -4,46 +4,43 @@
 	<meta charset="UTF-8">
 	<title>Mini Framework PHP</title>
 	<style>
-		header{
-			background: #e3e3e3;
-			padding: 2em;
-			text-align: center;					
-		}	
+	header{
+		background: #e3e3e3;
+		padding: 2em;
+		text-align: center;					
+	}	
 
-		h2 {
-			color: green;
-			padding-left: 2em;
-			padding-top: 2em;
-		}
+	h2 {
+		color: green;
+		padding-left: 2em;
+		padding-top: 2em;
+	}
 
-		li {
-			color: blue;
-		}	
+	li {
+		color: blue;
+	}	
 	</style>
 </head>
 <body>
 	<header>
-		<h1>Condicionales</h1>
+		<h2>Condicionales</h2>
 	</header>
 
 	<main>
-		<h2>Tareas</h2>
 		<ul>
 			<?php foreach ($tareas as $tarea): ?>
-			<?php if($tarea['completado'] !== true) continue; ?>
 			<li>
-				Tarea: <?= $tarea['tarea']; ?> <br>
-				Asigando: <?= $tarea['asignado']; ?> <br>
-				Fecha: <?= $tarea['fecha']; ?> <br>
-				<!-- Operador ternario -->
-				Completado: <?= ($tarea['completado'] === true) ? 'Tarea realizada' : 'Tarea no realizada'; ?>
+				<?= $tarea['descripcion']; ?>
 			</li>
-			<?php endforeach; ?>
-		</ul>
-	</main>
+		<?php endforeach; ?>	
+	</ul>
 
-	<footer>
-		
-	</footer>
+
+
+</main>
+
+<footer>
+
+</footer>
 </body>
 </html>
