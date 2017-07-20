@@ -30,7 +30,7 @@
 		<ul>
 			<?php foreach ($tareas as $tarea): ?>
 			<li>
-				<?= $tarea['descripcion']; ?>
+				<?= $tarea->descripcion; ?>
 			</li>
 		<?php endforeach; ?>	
 	</ul>

@@ -15,7 +15,7 @@ function listaTareas($base)
 {
 	$sentencia = $base->prepare('SELECT * FROM tarea');
 	$sentencia->execute();
-	$tareas = $sentencia->fetchAll();
+	$tareas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 	return $tareas;
 }
 
@@ -23,7 +23,7 @@ function listaTareasCompletadas($base)
 {
 	$sentencia = $base->prepare('SELECT * FROM tarea WHERE completado = true');
 	$sentencia->execute();
-	$tareas = $sentencia->fetchAll();
+	$tareas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 	return $tareas;
 }
 
