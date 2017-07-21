@@ -6,20 +6,20 @@ require 'Tarea.php';
 //$pdo = conectarDB();
 //$tareas = listaTareasCompletadas($pdo);
 
-$tarea1 = new Tarea();
-$tarea2 = new Tarea();
+$tarea1 = new Tarea(1, "Ir al supermercado", "Alejandro", 0, "2017-08-08");
+$tarea2 = new Tarea(2, "Comprar el pan", "Sergio", 0, "2017-08-08");
 
-$tarea1->setId(1);
-$tarea1->setDescripcion("Ir al supermercado");
-$tarea1->setAsignado("Alejandro");
-$tarea1->setCompletado(0);
-$tarea1->setFecha("2017-08-20");
+//$tarea1->setId(1);
+//$tarea1->setDescripcion("Ir al supermercado");
+//$tarea1->setAsignado("Alejandro");
+//$tarea1->setCompletado(0);
+//$tarea1->setFecha("2017-08-20");
 
-$tarea2->setId(2);
-$tarea2->setDescripcion("Comprar pan");
-$tarea2->setAsignado("Luis");
-$tarea2->setCompletado(0);
-$tarea2->setFecha("2017-08-20");
+//$tarea2->setId(2);
+//$tarea2->setDescripcion("Comprar pan");
+//$tarea2->setAsignado("Luis");
+//$tarea2->setCompletado(0);
+//$tarea2->setFecha("2017-08-20");
 
 echo $tarea1->getId() . "<br>";
 echo $tarea1->getDescripcion() . "<br>";
