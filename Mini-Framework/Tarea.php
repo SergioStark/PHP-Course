@@ -8,18 +8,6 @@ class Tarea {
 	private $completado;
 	private $fecha;
 
-	//Constructor - 
-	public function __construct($id, $descripcion, $asignado, $completado, $fecha) // __metodos magicos
-	{
-		$this->$id = $id;
-		$this->$descripcion = $descripcion;
-		$this->$asignado = $asignado;
-		$this->$completado = $completado;
-		$this->$fecha = $fecha;
-	}
-
-
-
 	//Funciones - Metodos
 
 	public function verAsignado()

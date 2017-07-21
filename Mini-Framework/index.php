@@ -2,54 +2,32 @@
 
 require 'functions.php';
 require 'Tarea.php';
+require 'Asignado.php';
 
-//$pdo = conectarDB();
-//$tareas = listaTareasCompletadas($pdo);
+$pdo = conectarDB();
+$tareas = listaTareas($pdo);
+$asignados = listaAsignado($pdo);
+//dd($tareas);
+/*echo $tareas[0]->getId() ."<br>";
+echo $tareas[0]->getDescripcion()."<br>";
+echo $tareas[0]->getAsignado()."<br>";
+echo $tareas[0]->getCompletado()."<br>";
+echo $tareas[0]->getFecha()."<br>";*/
 
-$tarea1 = new Tarea(1, "Ir al supermercado", "Alejandro", 0, "2017-08-08");
-$tarea2 = new Tarea(2, "Comprar el pan", "Sergio", 0, "2017-08-08");
 
-//$tarea1->setId(1);
-//$tarea1->setDescripcion("Ir al supermercado");
-//$tarea1->setAsignado("Alejandro");
-//$tarea1->setCompletado(0);
-//$tarea1->setFecha("2017-08-20");
+require 'index.view.php';
 
-//$tarea2->setId(2);
-//$tarea2->setDescripcion("Comprar pan");
-//$tarea2->setAsignado("Luis");
-//$tarea2->setCompletado(0);
-//$tarea2->setFecha("2017-08-20");
+/*
+1. Crear una tabla de "Asignado" dentro de "Tareas"
+	- id
+	- nombre
+	- puesto
+2. Crear la clase "Asignado"
+	- metodos getters y setters
+3. En el index view
+	- TAREAS
+	- ASIGNADO	
 
-echo $tarea1->getId() . "<br>";
-echo $tarea1->getDescripcion() . "<br>";
-echo $tarea1->getAsignado() . "<br>";
-echo $tarea1->getCompletado() . "<br>";
-echo $tarea1->getFecha() . "<br>";
-
-echo $tarea2->getId() . "<br>";
-echo $tarea2->getDescripcion() . "<br>";
-echo $tarea2->getAsignado() . "<br>";
-echo $tarea2->getCompletado() . "<br>";
-echo $tarea2->getFecha() . "<br>";
-
-/*-----------------------------------------*/
-
-echo $tarea1->getDescripcion() . "<br>";
-echo $tarea2->getDescripcion() . "<br>";
-
-$tarea1->setDescripcion("Ir al supermarket ;)");
-$tarea2->setDescripcion("Comprar pan");
-
-echo $tarea1->getDescripcion() . "<br>";
-echo $tarea2->getDescripcion();
-
-$tarea1->setAsignado("Sergio");
-$tarea2->setAsignado("Luis");
-
-echo $tarea1->getAsignado() . "<br>";
-echo $tarea2->getAsignado() . "<br>";
-
-//require 'index.view.php';
+*/
 
 ?>
