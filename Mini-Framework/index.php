@@ -1,9 +1,10 @@
 <?php 
-$query = require 'bootstrap.php';
+require 'core/bootstrap.php';
 
-$tareas = $query->selectAll('tarea', 'Tarea');
-$asignados = $query->selectAll('asignado','Asignado');
+require 'routes.php';
+	$router  = new Router();
+	$router->define($routes);
 
-require 'index.view.php';
+require $router->direct(Request::uri());
 
 ?>
