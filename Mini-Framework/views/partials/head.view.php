@@ -9,3 +9,5 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body>
+  	<?php require 'nav.view.php'; ?>
+  	<div class="container">

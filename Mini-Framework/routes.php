@@ -1,11 +1,9 @@
 <?php 
 
-	//localhost/PHP-Course/PHP-Course/Mini-Framework/
-//URL=						HOST 	= 	URI
-$routes = array(
-	'' => 'controllers/index.php',
-	'acerca' => 'controllers/acerca.php',
-	'contacto' => 'controllers/contacto.php'
-	);
+$router->get('', 'controllers/inicio.php');
+$router->get('acerca', 'controllers/acerca.php');
+$router->get('contacto', 'controllers/contacto.php');
+
+$router->post('usuario', 'controllers/usuario.php');
 
 ?>

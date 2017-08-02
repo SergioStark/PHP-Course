@@ -1,10 +1,10 @@
 <?php 
 require 'core/bootstrap.php';
 
-require 'routes.php';
-	$router  = new Router();
-	$router->define($routes);
+$router  = new Router();
 
-require $router->direct(Request::uri());
+require 'routes.php';
+	
+require $router->direct(Request::uri(), Request::method());
 
 ?>
