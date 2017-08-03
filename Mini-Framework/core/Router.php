@@ -7,6 +7,14 @@ class Router
 		'POST' => array()
 		);
 
+
+	public static function load($file)
+	{
+		$router = new static;
+		require $file;
+		return $router;
+	}
+
 	public function direct($uri, $method)
 	{
 		if(array_key_exists($uri, $this->routes[$method])) {
