@@ -12,16 +12,14 @@ class UsuarioController
 			);
 
 		App::get('db')->insert('usuario',$parameters);
-
-		header('Location: /');
-
 		}		
+		redirect('usuario');
 	}
 
 	public function mostrar()
 	{
 		$usuarios = App::get('db')->selectAll('usuario');
-		require __DIR__ . '/../views/usuario.view.php';
+		view('usuario',compact('usuarios'));
 	}
 }
 

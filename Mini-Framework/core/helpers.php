@@ -8,15 +8,15 @@ function dd($arreglo)
 	die();
 }
 
-
-function view($name)
+function view($name, $data=array())
 {
-	return require __DIR__ . "views/{$name}.view.php"
+	extract($data);
+	return require __DIR__ . "/../app/views/{$name}.view.php";
 }
 
-function redirect()
+function redirect($uri)
 {
-
+	header("Location: /{$uri}");
 }
 
 

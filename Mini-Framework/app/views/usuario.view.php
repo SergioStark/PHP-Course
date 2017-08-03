@@ -8,7 +8,6 @@
 <?php endforeach; ?>
 </ul>
 
-
 <div class="row">
     <form class="col s12" method="POST" action="/usuario">
       <div class="row">
