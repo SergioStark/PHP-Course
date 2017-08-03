@@ -1,0 +1,8 @@
+Instalar composer en windows
+verificar que composer se haya instalado con el comando = composer en el cmd
+Generar un nuevo archivo en la raiz del proyecto que se llame composer.json y agregar el contenido que viene dentro de este proyecto.
+Navegar hasta el proyecto con cmd y ejecutar el comando = composer install
+Eliminar la mayoria de los requires del archivo bootstrap en el proyecto y agregar un unico require en index.php del archivo autoload.php que se encuentra en la carpeta vendor.
+
+Para actualizar las clases ddentro de nuestro proyecto con composer, escribimos el siguente comando en el cmd = 
+composer dump-autoload

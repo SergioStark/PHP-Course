@@ -1,9 +1,10 @@
 <?php 
 
-$router->get('', 'controllers/inicio.php');
-$router->get('acerca', 'controllers/acerca.php');
+$router->get('', 'WebController@inicio' );
+$router->get('acerca', 'WebController@acerca');
 $router->get('contacto', 'controllers/contacto.php');
 
-$router->post('usuario', 'controllers/usuario.php');
+$router->get('usuario', 'UsuarioController@mostrar');
+$router->post('usuario', 'UsuarioController@guardar');
 
 ?>
