@@ -4,9 +4,9 @@ return array(
 	'database' => array(
 		'type' => 'mysql',
 		'host' => '127.0.0.1',
-		'name' => 'usuarios',
-		'user' => 'root',
-		'pass' => ''
+		'name' => 'tasks', //ingresa tu base de datos
+		'user' => 'root', //igresa tu usuario
+		'pass' => '' //ingresa tu password
 		)
 	);
 

@@ -3,23 +3,16 @@
       <a href="/" class="brand-logo">Mini</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="/">Inicio</a></li>
-        <li><a href="acerca">Acerca</a></li>
-        <li><a href="usuario">Usuarios</a></li>
-        <li><a href="contacto">Contacto</a></li>
+        <li class="<?php echo ($page == 'index') ? 'active' : ''; ?>"><a href="/">Index</a></li>
+        <li class="<?php echo ($page == 'about') ? 'active' : ''; ?>"><a href="about">About</a></li>
+        <li class="<?php echo ($page == 'contact') ? 'active' : ''; ?>"><a href="contact">Contact</a></li>
+        <li class="<?php echo ($page == 'task') ? 'active' : ''; ?>"><a href="task">Task</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="/">Inicio</a></li>
-        <li><a href="acerca">Acerca</a></li>
-        <li><a href="usuario">Usuarios</a></li>
-        <li><a href="contacto">Contacto</a></li>
+        <li class="<?php echo ($page == 'index') ? 'active' : ''; ?>"><a href="/">Index</a></li>
+        <li class="<?php echo ($page == 'about') ? 'active' : ''; ?>"><a href="about">About</a></li>
+        <li class="<?php echo ($page == 'contact') ? 'active' : ''; ?>"><a href="contact">Contact</a></li>
+        <li class="<?php echo ($page == 'task') ? 'active' : ''; ?>"><a href="task">Task</a></li>
       </ul>
     </div>
   </nav>
-<!--Peticiones Web
-  GET - Para mandar o acceder a traves de URL
-   - OPTIONS
-   - HEAD
-  POST - Para mandar datos a traves de un formulario / Guardarlos en BD
-  PUT - Para mandar datos a traves de peticiones AJAX / Actualizar
-  DELETE - Para mandar datos a traves de peticiones AJAX / Eliminiar-->

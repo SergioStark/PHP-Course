@@ -11,9 +11,9 @@ return array(
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInitad68036b70889fd87c66e0e2de849ec4' => $vendorDir . '/composer/autoload_static.php',
     'Connection' => $baseDir . '/core/database/Connection.php',
+    'ExampleController' => $baseDir . '/app/controllers/ExampleController.php',
     'QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',
     'Request' => $baseDir . '/core/Request.php',
     'Router' => $baseDir . '/core/Router.php',
-    'UsuarioController' => $baseDir . '/app/controllers/UsuarioController.php',
-    'WebController' => $baseDir . '/app/controllers/WebController.php',
+    'TaskController' => $baseDir . '/app/controllers/TaskController.php',
 );

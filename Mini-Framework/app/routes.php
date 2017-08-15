@@ -1,10 +1,10 @@
 <?php 
 
-$router->get('', 'WebController@inicio' );
-$router->get('acerca', 'WebController@acerca');
-$router->get('contacto', 'WebController@contacto');
+$router->get('', 'ExampleController@index' );
+$router->get('about', 'ExampleController@about');
+$router->get('contact', 'ExampleController@contact');
 
-$router->get('usuario', 'UsuarioController@mostrar');
-$router->post('usuario', 'UsuarioController@guardar');
+$router->get('task', 'TaskController@show');
+$router->post('task', 'TaskController@store');
 
 ?>
